@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript DSA 1.2</title>
+</head>
+<body>
+
+    <h3>WRITE A a program to find out the simple interest.Info : Formula for Simple Interest :A = P ( 1 + rt )Values : P = 815 r = 9 t = 3 </h3>
+
+    <script>
+
+        // My Old Code
+        let P = 815;
+        let r = 9;
+        let t =3;
+        let Interset = P*r*t;
+        document.write(Interset);
+
+
+        // My Changed Code
+        function A(P,R,T){
+            let interest = P*(1+(R/100)*T);
+            return interest;
+        }
+        console.log(A(815,9,3));
+
+    </script>
+    
+</body>
+</html>
