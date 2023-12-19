@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditional Statements Assignment Question No.1</title>
+  </head>
+  <body>
+    <h1>This is a program to check if the given age is above 25.</h1>
+    <h3>age = 33</h3>
+
+    <script>
+
+    // First Way
+
+    let Age  = 33;
+    if(Age>25){
+        console.log("Yes You Are Eligible");
+    }
+    else{
+        console.log("You are Not Eligible");
+    }
+
+
+    // Second Way
+
+    let A = prompt("Enter Your Age!");
+    if(A>25){
+        alert("You Are Eligible");
+    }
+    else if(A==="" || A===null || A!=Number){    
+        alert("Enter Valid Age");
+    }
+    else{
+        alert("You Are Not Eligible")
+    }
+
+
+    </script>
+
+
+  </body>
+</html>
