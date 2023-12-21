@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops Assignment Question No.1</title>
+  </head>
+  <body>
+    <h1>Create an array containing the names of your best friends. Run a loop
+      through that array to print all their names.</h1>
+
+
+      <script>
+
+        // First Way
+        let Friends = ["A","B","C","D","E","F","G","H"];
+        for(BestFriends of Friends){
+            // console.log(`My Best Friend Name is  ${BestFriends}`);   /*One Way*/
+            document.write("My Best Friend Name is " + BestFriends + "<br>");   /*Second Way*/
+        }
+        document.write("<br><br>");
+
+        // Second Way
+        let Friend = ["A","B","C","D","E","F","G","H"];
+        Friend.forEach(E=>{
+            document.write("My Best Friend Name is " + E + "<br>");
+        });
+        document.write("<br><br>");
+
+        // Third Way
+        let F = ["A","B","C","D","E","F","G","H"];
+        for(let i=0; i<F.length; i++){
+            document.write("My Best Friend Name is "+F[i] + "<br>");
+        }
+        document.write("<br><br>");
+
+
+      </script>
+
+
+
+  </body>
+</html>

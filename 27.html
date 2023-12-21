@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops Assignment Question No.2</title>
+  </head>
+  <body>
+    <h1>Find out the average of the numbers from the given array.</h1>
+    <h3>let scores = [ 15, 25, 22, 17, 19, 12, 7, 99, 61 ]</h3>
+
+    <script>
+    // First Way
+    let scores = [15, 25, 22, 17, 19, 12, 7, 99, 61];
+    // Calculate the sum of all elements
+    let sum = scores.reduce((acc, score) => acc + score, 0);
+    // Calculate the average
+    let average = sum / scores.length;
+    console.log("Average:", average);
+
+
+    // Second Way
+    // let scores = [15, 25, 22, 17, 19, 12, 7, 99, 61];
+    // let sum=0;
+    // for(let i=0;i<scores.length;i+=1){
+    //     sum+=scores[i];
+    //     document.write(`The Sum of All Numbers is ${sum}<br>`);
+    // }
+    // document.write("<br>");
+    // document.write("The Average of All Numbers is "+sum/scores.length);
+
+    </script>
+
+  </body>
+</html>
