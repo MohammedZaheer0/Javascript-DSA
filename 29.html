@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop Assignment Question No.4</title>
+  </head>
+  <body>
+    <h1>Write a program to</h1>
+    <h3>A. Generate 10 random numbers using Math function in javascript between 1 - 100 </h3>
+    <h3>B. Output the sum of the 10 generated numbers</h3>
+
+    <script>
+        let sum = 0;
+        for(let i=0; i<10; i++){
+            let randomNumber = Math.round(Math.random()*100)+1;
+            sum += randomNumber;    
+            console.log("Random Number " + (i+1) + " : "+ randomNumber);
+        } 
+        console.log(sum);
+    
+
+
+
+        
+
+
+    </script>
+
+
+
+
+  </body>
+</html>
