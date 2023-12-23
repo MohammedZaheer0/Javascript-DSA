@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Function Assignment Question No.5</title>
+  </head>
+  <body>
+    <h1>Write a function to :</h1>
+      a. Check if the name exists in the array. <br>
+      b. If the element doesn't exist add the element and return the array. <br>
+      c. If the element exists return true <br>
+
+
+      <script>
+
+        // Exists
+
+          function Exists(){
+            let Names = ["Mohammed","Shaik", "Abdul", "Syed", "Pathaan", "Ahmed"];
+            return Names.includes("Pathaan");
+        }
+        console.log(Exists());
+
+
+    //    Not Exists
+         
+          function NotExists(){
+            let Names = ["Mohammed","Shaik", "Abdul", "Syed", "Pathaan", "Ahmed"];
+            if(Names.includes("Zaheer")){
+                console.log("Yes Name is There")
+            }
+            else{
+                Names.push("Zaheer");
+                console.log(Names);
+            }    
+          }  
+          NotExists();
+          
+
+
+
+      </script>
+
+
+
+  </body>
+</html>

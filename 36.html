@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Function Assignment Question No.4</title>
+  </head>
+  <body>
+    <h1>Write a function return the average of the numbers in an array.</h1>
+
+    <script>
+
+        
+        function A(){
+            let Avg = [1,5,9,2,88,33];
+            let sum = 0;
+            for(let i=0; i<Avg.length; i+=1){
+                sum+= Avg[i];
+            }
+            return sum/Avg.length;  
+        }
+        console.log(A());
+
+    </script>
+
+
+  </body>
+</html>
