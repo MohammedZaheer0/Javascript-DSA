@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Assignment Question No.1</title>
+  </head>
+  <body id="main">
+    <h1>Create a H1 Tag using Java script</h1>
+    <div>...</div>
+
+    <script>
+
+       let Element = document.createElement("h1");
+       let Text = document.createTextNode("This is Heading 1 Tag Created Using JavaScript");
+       Element.appendChild(Text);
+       console.log(Element); 
+       let Target = document.getElementById("main");
+       Target.appendChild(Element);
+       console.log(Target);
+        
+    </script>
+
+
+
+  </body>
+  </html>

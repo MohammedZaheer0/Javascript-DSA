@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>DOM Assignment Question No.2</title>
+  </head>
+  <body>
+    <h1>Create an image tag and add an image to it using JavaScript</h1>
+    <div id="A"></div>
+
+    <script>
+
+        let Element = document.createElement("img");
+        Element.setAttribute("src","dog.jpg");
+        Element.style.width = "300px";
+        let Div = document.getElementById("A");
+        Div.appendChild(Element);
+        console.log(Div);
+
+    </script>
+
+
+  </body>
+  </html>

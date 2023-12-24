@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+    <title>DOM Assignment Question No.3</title>
+  </head>
+  <body id="main">
+    <h1>Generate the following HTML code using JavaScript :-</h1>
+    <h3><section class="login"> <br>
+    <input type="text" class="emailInput"> <br>
+    <input type="password" class="passwordInput"> <br>
+    <button class="loginButton">Login</button> <br>
+    </section ></h3>
+    <br>
+    <br>
+
+
+    <h3 id="newH3"></h3>
+    <script>
+
+        // First Way of Defining
+
+        // let Element = document.createElement("h3");
+        // Element.setAttribute("class","newTag");
+        // console.log(Element); 
+        // Element.style.display = "flex";
+        // Element.style.flexDirection = "column";
+        // Element.style.width = "150px";
+
+        // let Section = document.createElement("section");
+        // Section.setAttribute("class","login");
+        // Element.insertAdjacentElement("afterbegin",Section);
+
+        // let Input1 = document.createElement("input");
+        // Input1.setAttribute("type","text");
+        // Input1.setAttribute("class","emailInput");
+        // Section.insertAdjacentElement('afterbegin',Input1);
+
+
+        // let Input2 = document.createElement("input");
+        // Input2.setAttribute("type","password");
+        // Input2.setAttribute("class","passwordInput");
+        // Section.insertAdjacentElement("beforeend",Input2);
+        // // console.log(Section);
+
+
+        // let Button = document.createElement("button");
+        // Button.textContent = "Login";
+        // Button.setAttribute("class","loginButton");
+        // Section.insertAdjacentElement("beforeend",Button);
+        
+
+        // let Target = document.getElementById("main");
+        // Target.insertAdjacentElement("afterbegin",Element);
+        // console.log(Target);
+
+
+        
+        // Second Way of Defining
+
+        let Element = document.createElement("section");
+        Element.classList = "login";
+        Element.style.display = "flex";
+        Element.style.flexDirection = "column";
+        Element.style.width = "150px";
+        // console.log(Element);
+
+        let Input1 = document.createElement("input");
+        Input1.setAttribute("type","text");
+        Input1.setAttribute("class","emailInput");
+        // console.log(Input1);
+
+        let Input2 = document.createElement("input");
+        Input2.setAttribute("type","password");
+        Input2.setAttribute("class","passwordInput");
+        // console.log(Input2);
+
+        let Button = document.createElement("button");
+        Button.textContent = "Login";
+        Button.setAttribute("class","loginButton");
+        // console.log(Button);
+        
+        Element.appendChild(Input1);
+        Element.appendChild(Input2);
+        Element.appendChild(Button);
+        console.log(Element);
+        
+        let Target = document.getElementById("newH3").appendChild(Element);
+
+
+        </script>
+  </body>
+  </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Assignment Question No.4</title>
+  </head>
+  <body>
+    <body>
+      <p>Create a P Tag using Button and add InnerText and Loop it Multiple Times</p>
+      
+      <button id="btn">Click Here To Insert New Row</button>
+
+
+      <script>
+        
+        let Create = document.getElementById("btn").addEventListener('click',function(){
+            let Data = document.createElement("p").innerText = "Iam Created";
+            for(let i = 0; i<Data.length; i++){
+                console.log(Data[i]);
+            }
+        })
+
+      </script>
+    
+
+
+
+  </body>
+</html>
