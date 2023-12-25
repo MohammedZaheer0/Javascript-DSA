@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> DOM Assignment Question No.7</title>
+  </head>
+  <body id="main">
+
+    <h4>Create a Div Element and in that one input field and one button with Increase Count and when you click on that button the number should increase in the input field</h4>
+
+    <script>
+
+    let DivElement = document.createElement("div");
+    DivElement.setAttribute("id","divelement");
+    
+    let InputElement = document.createElement("input");
+    InputElement.value = 0;
+    InputElement.setAttribute("id","input");
+    DivElement.insertAdjacentElement("afterbegin",InputElement);
+    
+    let ButtonElement = document.createElement("button");
+    ButtonElement.textContent = "Increase Count";
+    ButtonElement.setAttribute("id","btn");
+    ButtonElement.style.backgroundColor = "orange";
+    DivElement.insertAdjacentElement("beforeend",ButtonElement);        
+
+    let Target = document.getElementById("main");
+    Target.insertAdjacentElement("beforeend",DivElement);
+
+
+    let Increase = document.getElementById("btn").addEventListener("click",function(){
+        let I = document.getElementById("input");
+        I.value = parseInt(I.value)+1;
+    });
+    
+
+        
+    </script>
+
+  </body>
+</html>

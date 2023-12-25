@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> DOM Assignment Question No.8</title>
+  </head>
+  <body id="main">
+
+    <h4>Create a div in that one main div and in that div one input field and two buttons one with increase and another with decrease and when click on increase number should increase and when click on decrease number should decrease</h4>
+
+
+    <script>
+// document.getElementById("demo").setAttribute(
+//    "style", "font-size: 100px; font-style: italic; color:#ff0000;");
+    
+    let MainDiv = document.createElement("div");
+    MainDiv.setAttribute("style","width:50%; margin:0 auto; padding:50px;display:flex;flex-direction:column;justify-content:center;align-items:center;");
+    
+    let TopDiv = document.createElement("input")
+    TopDiv.value = 0;
+    TopDiv.setAttribute("style","width:300px;height:150px; background-color:lightblue; font-size:1.5rem; text-align:center;");
+    TopDiv.setAttribute("id","input")
+    MainDiv.insertAdjacentElement("afterbegin",TopDiv);        
+    
+
+    let SecondMainDiv = document.createElement("div");
+    SecondMainDiv.setAttribute("id","secondmaindiv");
+    SecondMainDiv.setAttribute("style","display:flex;flex-direction:row;justify-content:space-evenly;align-items:center")
+    MainDiv.insertAdjacentElement("beforeend",SecondMainDiv);
+
+    let LeftDiv = document.createElement("button");
+    LeftDiv.textContent = "Decrease Number";
+    LeftDiv.setAttribute("id","leftdiv")
+    LeftDiv.setAttribute("style","float:left;width:120px;height:60px;background-color:tomato; margin:10px; font-size:1.1rem; cursor:pointer;text-align:center;");
+    SecondMainDiv.insertAdjacentElement("beforeend",LeftDiv); 
+    
+    let RightDiv = document.createElement("button");
+    RightDiv.textContent = "Increase Number";
+    RightDiv.setAttribute("id","rightdiv")
+    RightDiv.setAttribute("style","float:right;width:120px;height:60px;background-color:lightgreen; font-size:1.1rem; cursor:pointer;text-align:center;");
+    SecondMainDiv.insertAdjacentElement("beforeend",RightDiv); 
+
+    Target = document.getElementById("main");
+    Target.insertAdjacentElement("afterbegin",MainDiv);
+
+
+
+    let Increase = document.getElementById("rightdiv").addEventListener("click",function(){
+        let Output = document.getElementById("input");
+        Output.value = parseInt(Output.value)+1;
+        console.log(`One Number is Increasing ${Output.value}`);
+    });
+
+    let Decrease = document.getElementById("leftdiv").addEventListener("click",function(){
+        let Output = document.getElementById("input");
+        Output.value = parseInt(Output.value)-1;
+        console.log(`One Number is Decreasing ${Output.value}`);
+    });
+
+
+    </script>
+
+  </body>
+</html>

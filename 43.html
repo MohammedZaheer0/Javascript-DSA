@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> DOM Assignment Question No.6</title>
+  </head>
+  <body id="main">
+
+    <h4>Create a Div and in that div create a img element and button element and when you click one the remove image button image should be hidden and when you click on get image button the image should be visible </h4>
+
+    <script>
+
+    let DivElement = document.createElement("div");
+    DivElement.setAttribute("id","divTag");
+    
+    let ImgElement = document.createElement("img");
+    ImgElement.setAttribute("src","dog.jpg");
+    ImgElement.setAttribute("id","image");
+    ImgElement.style.width = "300px";
+    DivElement.insertAdjacentElement("afterbegin",ImgElement);
+
+    let ButtonElement = document.createElement("button")
+    ButtonElement.innerHTML = "Remove Image";
+    ButtonElement.setAttribute("id","btn");
+    ButtonElement.style.backgroundColor = "lightgreen";
+    DivElement.insertAdjacentElement("beforeend",ButtonElement);
+
+    let Target = document.getElementById("main");
+    Target.insertAdjacentElement("afterbegin",DivElement);
+
+
+    let Button = document.getElementById("btn").addEventListener('click',function(){
+        this.style.backgroundColor = "cyan";
+        this.innerHTML = "Get Image";
+        let Img = document.getElementById("image");
+        
+        if(Img.style.display == "none"){
+            Img.style.display = "block";
+            Img.setAttribute("src","dog.jpg");
+            this.innerHTML = "Remove Image";
+        }else{
+            Img.style.display = "none";
+            this.innerHTML = "Get Image";
+        }
+    });
+
+
+
+    </script>
+
+
+
+  </body>
+</html>

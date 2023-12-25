@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Assignment Question No.5</title>
+  </head>
+  <body id="main">
+
+    <h4>Create a Div and in that Div create One Image Element and Down Image Element Create Button  with some Text like Remove Image and  below button element create a p tag which is empty and append the Div Element to the body tag and write a function when you click the button the image should be disable and p tag should show with text like refresh the page to get the image that it...</h4>
+
+    <script>
+
+        let DivElement = document.createElement("div");
+        DivElement.setAttribute("id","RemoveDiv");
+        
+        let ImgElement = document.createElement("img");
+        ImgElement.setAttribute("src","dog.jpg");
+        ImgElement.setAttribute("id","image");
+        ImgElement.style.width  = "300px";
+        DivElement.insertAdjacentElement("afterbegin",ImgElement);
+
+        let ButtonElement = document.createElement("button");
+        ButtonElement.innerText = "Remove Image";
+        ButtonElement.setAttribute("id","btn");
+        ButtonElement.style.backgroundColor = "cyan";
+        DivElement.insertAdjacentElement("beforeend",ButtonElement);
+        
+        let Target = document.getElementById("main");
+        Target.insertAdjacentElement("afterbegin",DivElement);
+        console.log(DivElement);
+
+        let PElement = document.createElement("p");
+        PElement.setAttribute("id","ptag");
+        DivElement.insertAdjacentElement("beforeend",PElement);
+
+        let Remove = document.getElementById("btn")
+        Remove.addEventListener('click',function(){
+            document.getElementById("image").removeAttribute("src");
+           let P = document.getElementById("ptag").textContent = "Refresh The Page To Get The Image"; 
+        });
+
+
+    </script>
+
+  </body>
+</html>
