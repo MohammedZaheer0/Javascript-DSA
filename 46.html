@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Assignment Question No.9</title>
+  </head>
+  <body>
+
+    <script>
+
+    let OuterDiv = document.createElement("div");
+    OuterDiv.setAttribute("id","outerdiv");
+    OuterDiv.setAttribute("style","width:50%; margin:0 auto; background-color:lightgreen;");
+
+    let Img1 = document.createElement("img");
+    Img1.setAttribute("id","img1");
+    Img1.setAttribute("style","display:flex;flex-direction:row; justify-content:center;align-items:center; width:50%; margin:0 auto;")
+    OuterDiv.insertAdjacentElement("afterbegin",Img1);
+
+    let InnerDiv = document.createElement("div");
+    InnerDiv.setAttribute("id","innerdiv");
+    InnerDiv.setAttribute("style","display:flex; flex-direction: row; margin:10px; padding:5px; justify-content:center; align-items:center;");
+    OuterDiv.insertAdjacentElement("beforeend",InnerDiv);
+    
+    let Button1 = document.createElement("button");
+    Button1.setAttribute("id","btn1");
+    Button1.textContent = "Previous Image";
+    Button1.setAttribute("style","padding:10px;background-color:lightcyan;border-radius:5px;margin:10px;");
+    InnerDiv.insertAdjacentElement("beforeend",Button1);
+
+    let Button2 = document.createElement("button");
+    Button2.textContent = "Next Image";
+    Button2.setAttribute("id","btn2");
+    Button2.setAttribute("style","padding:10px;background-color:lightcyan;border-radius:5px;margin:10px;");
+    InnerDiv.insertAdjacentElement("beforeend",Button2);
+
+    document.body.appendChild(OuterDiv);
+
+    let Img2 = [
+    "https://picsum.photos/200/300",
+    "https://picsum.photos/201/300",
+    "https://picsum.photos/202/300",
+    "https://picsum.photos/203/300",
+    "https://picsum.photos/204/300",
+    "https://picsum.photos/205/300"
+    ];
+
+    let currentImageIndex = 0;
+
+    let Decrease = document.getElementById("btn1").addEventListener("click",function(){
+        currentImageIndex = (currentImageIndex - 1) % Img2.length;
+        Img1.src = Img2[currentImageIndex];
+    });  
+    
+    let Increase = document.getElementById("btn2").addEventListener("click",function(){
+        currentImageIndex = (currentImageIndex +1 + Img2.length) % Img2.length;
+        Img1.src = Img2[currentImageIndex];
+    });
+
+
+    
+
+
+    </script>
+
+
+  </body>
+</html>

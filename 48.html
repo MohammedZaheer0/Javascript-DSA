@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Assignment Question No.11</title>
+  </head>
+  <body>
+
+    <script>
+
+        let OuterDiv = document.createElement("div");
+        OuterDiv.setAttribute("id","outerdiv");
+        OuterDiv.setAttribute("style","display:flex;flex-direction:row;padding:20px; box-shadow:3px 5px 2px 1px solid black; margin:0 auto; justify-content:center; align-items:center;");
+        document.body.appendChild(OuterDiv);   
+
+
+        let InnerDiv = document.createElement("div");
+        InnerDiv.setAttribute("id","innerdiv");
+        InnerDiv.setAttribute("style","display:flex;flex-direction:column;justify-content:space-evenly;align-items:center")
+        OuterDiv.insertAdjacentElement("afterbegin",InnerDiv);
+
+
+        let Input1 = document.createElement("input");
+        Input1.setAttribute("id","input1");
+        Input1.setAttribute("type","text");
+        Input1.setAttribute("placeholder","Enter First Name");
+        Input1.setAttribute("style","padding:10px;text-align:center;font-size:1rem;margin:10px;");
+        InnerDiv.insertAdjacentElement("afterbegin",Input1);
+
+
+        let Input2 = document.createElement("input");
+        Input2.setAttribute("id","input2");
+        Input2.setAttribute("type","email");
+        Input2.setAttribute("placeholder","Enter Email Address");
+        Input2.setAttribute("style","padding:10px;text-align:center;font-size:1rem;margin:10px;");
+        InnerDiv.insertAdjacentElement("beforeend",Input2);
+
+
+        let Input3 = document.createElement("input");
+        Input3.setAttribute("id","input3");
+        Input3.setAttribute("type","number");
+        Input3.setAttribute("placeholder","Enter Phone Number");
+        Input3.setAttribute("style","padding:10px;text-align:center;font-size:1rem;margin:10px;");
+        InnerDiv.insertAdjacentElement("beforeend",Input3);
+
+
+        let Button = document.createElement("button");
+        Button.innerHTML = "Login Now";
+        Button.setAttribute("id","btn")
+        Button.setAttribute("style","padding:10px;text-align:center;font-size:1rem;margin:10px;background-color:lightcyan;");
+        InnerDiv.insertAdjacentElement("beforeend",Button);
+
+
+
+        let InnerDivBottom = document.createElement("div");
+        InnerDivBottom.setAttribute("id","innerdivbotton");
+        InnerDivBottom.setAttribute("style","display:flex;flex-direction:row;justify-content:space-evenly;align-items:center")
+        InnerDiv.insertAdjacentElement("beforeend",InnerDivBottom);
+
+
+        let Color1 = document.createElement("button");
+        Color1.setAttribute("style","height:25px;width:25px;border-radius:50%;background-color:#53C2CB;margin:25px;");
+        Color1.onclick = () => OuterDiv.style.backgroundColor = "#53C2CB";
+        InnerDivBottom.insertAdjacentElement("afterbegin",Color1);
+
+        let Color2 = document.createElement("button");
+        Color2.setAttribute("style","height:25px;width:25px;border-radius:50%;background-color:#E0605F;margin:25px;");
+        Color2.onclick = () => OuterDiv.style.backgroundColor = "#E0605F";
+        InnerDivBottom.insertAdjacentElement("beforeend",Color2);
+
+
+        let Color3 = document.createElement("button");
+        Color3.setAttribute("style","height:25px;width:25px;border-radius:50%;background-color:#272F42;margin:25px;");
+        Color3.onclick = () => OuterDiv.style.backgroundColor = "#272F42";
+        InnerDivBottom.insertAdjacentElement("beforeend",Color3);
+
+
+        let Color4 = document.createElement("button");
+        Color4.setAttribute("style","height:25px;width:25px;border-radius:50%;background-color:#F3B3BC;margin:25px;");
+        Color4.onclick = () => OuterDiv.style.backgroundColor = "#F3B3BC";
+        InnerDivBottom.insertAdjacentElement("beforeend",Color4);
+
+
+        let Color5 = document.createElement("button");
+        Color5.setAttribute("style","height:25px;width:25px;border-radius:50%;background-color:#F7EF7F; margin:25px;");
+        Color5.onclick = () => OuterDiv.style.backgroundColor = "#F7EF7F";
+        InnerDivBottom.insertAdjacentElement("beforeend",Color5);
+
+
+        let Color6 = document.createElement("button");
+        Color6.setAttribute("style","height:25px;width:25px;border-radius:50%;background-color:#BB5D72; margin:25px;");
+        Color6.onclick = () => OuterDiv.style.backgroundColor = "#BB5D72";
+        InnerDivBottom.insertAdjacentElement("beforeend",Color6);
+
+        let Color7 = document.createElement("button");
+        Color7.setAttribute("style","height:25px;width:25px;border-radius:50%;background-color:#8B63C3; margin:25px;");
+        Color7.onclick = () => OuterDiv.style.backgroundColor = "#8B63C3";
+        InnerDivBottom.insertAdjacentElement("beforeend",Color7);
+
+        let Color8 = document.createElement("button");
+        Color8.setAttribute("style","height:25px;width:25px;border-radius:50%;background-color:lightgreen; margin:25px;");
+        Color8.onclick = () => OuterDiv.style.backgroundColor = "lightgreen";
+        InnerDivBottom.insertAdjacentElement("beforeend",Color8);
+
+
+
+    </script>
+
+  </body>
+</html>
