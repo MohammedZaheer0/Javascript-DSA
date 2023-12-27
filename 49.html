@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arithematic Assignment Question No.1</title>
+  </head>
+  <body>
+    <h1>remove the duplicate values from inside the array.</h1>
+    <h3>let numbers = [1,3,3,3,1,5,6,7,8,1]</h3>
+
+
+    <script>
+
+    // Using Filter     The Unique Values are Printed         
+    let Numbers = [1,3,3,3,1,5,6,7,8,1]; 
+    let uniqueNumbers = Numbers.filter((value,index,num)=>{
+        return num.indexOf(value)=== index;
+    });
+    console.log(`Removed The Repeated Values and Printed Single Values ${uniqueNumbers}`);
+
+
+    // Using Filter     The Duplicate Values are Printed
+    let numbers = [1,3,3,3,1,5,6,7,8,1]; 
+    let UniqueNumbers = numbers.filter((value,index,num)=>{
+        return num.indexOf(value)!== index;
+    });
+    console.log(`Here Are The Repeated Values ${UniqueNumbers}`);
+
+
+    
+    // Using Map
+    let Num = [1,3,3,3,1,5,6,7,8,1];
+    let Unique = Num.map((value,index,num)=>{
+        return num.indexOf(value) === index;
+    });
+    console.log(`The Repeated Numbers Will Get  False and Rest Numbers Will Get True ${Num} ${Unique}`);
+
+
+    // Using Spread Operator
+    let numbers1 = [1,3,3,3,1,5,6,7,8,1];
+    const newNumbers = [...new Set(numbers1)];  
+    console.log('Map array is '+newNumbers); 
+
+
+
+
+    </script>
+
+
+
+
+  </body>
+  </html>
+  
