@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Arithematic Assignment Question No.4</title>
+  </head>
+  <body>
+    <h1>let sentence = 'Hello I am learning JavaScript'  <br>
+        Write a program to remove all duplicate characters in the sentence. <br>
+        For Example : a is repeating several times, so remove all duplicate occurances of a</h1>
+
+
+    <script>
+
+    let sentence = 'Hello I am learning JavaScript';
+    let s =  sentence.split('').filter((value,index,sen)=>{
+        return sen.indexOf(value) === index;
+    }).join('');
+    console.log(s);        
+
+        
+
+    </script>
+
+
+
+  </body>
+  </html>
+  
