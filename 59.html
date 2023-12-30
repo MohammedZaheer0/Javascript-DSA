@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arithematic Assignment Question No.11</title>
+  </head>
+  <body>
+    let numbers = [1,5,8,9, [12, 21, 31, 41], [16,18] , 22, 24 ] <br />
+    Write a program to calculate the total of all the numbers
+
+    <script>
+
+        function sum(...numbers){
+            let sum = 0;
+            for(let i of numbers.flat()){
+                sum+=i;
+            }
+            console.log( `The Sum is  ${sum}`);
+        }
+    let number = [1,5,8,9, [12, 21, 31, 41], [16,18] , 22, 24 ];
+    sum(...number);
+
+
+    </script>
+
+  </body>
+</html>
+
